@@ -1,0 +1,20 @@
+{
+  "name": "claude-zcode-relay",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Event-driven MCP relay that lets Claude Code delegate bounded tasks to ZCode desktop GLM sub-agents; runs beside the Codex relay as an independent stack",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "3.25.76"
+  },
+  "scripts": {
+    "start": "node relay-mcp.cjs controller",
+    "worker": "node relay-mcp.cjs worker",
+    "test": "node --test test/*.test.cjs",
+    "status": "node tools/status.cjs"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
